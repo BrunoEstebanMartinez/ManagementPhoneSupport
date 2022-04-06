@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import {API} from '../APIs ';
+import {APICore} from '../Services/API.service';
 
 export interface PhoneCriteria{
   id: number, 
@@ -9,12 +8,9 @@ export interface PhoneCriteria{
   owner: string, 
 }
 
-@Injectable({
-  providedIn: 'root'
-})
 export class PhonesService {
 
-  constructor(API: APICore) { 
+  constructor(apiCore: APICore) { 
 
   }
 }
