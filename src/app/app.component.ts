@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'managementphonesfix';
-  apiValues : any;
-
-  
-
 
   ngOnInit(){
     this.getPhones();
