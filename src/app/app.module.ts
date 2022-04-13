@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigateComponent } from './navigate/navigate.component';
 import { TablesComponent } from './tables/tables.component';
+import { FormsComponent } from './forms/forms.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { TablesComponent } from './tables/tables.component';
     HomeComponent,
     NavigateComponent,
     TablesComponent,
+    FormsComponent,
   
   ],
   imports: [

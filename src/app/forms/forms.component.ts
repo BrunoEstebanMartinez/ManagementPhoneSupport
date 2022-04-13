@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tables',
-  templateUrl: './tables.component.html',
+  selector: 'app-forms',
+  templateUrl: './forms.component.html',
   styleUrls: ['../app.component.scss']
 })
-export class TablesComponent implements OnInit {
+export class FormsComponent implements OnInit {
 
   constructor() { }
 
