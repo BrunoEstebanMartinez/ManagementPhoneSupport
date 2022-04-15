@@ -13,8 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigateComponent } from './navigate/navigate.component';
 import { TablesComponent } from './tables/tables.component';
-import { FormsComponent } from './forms/forms.component';
-import { ButtonsComponent} from './buttons/buttons.component';
+import { ListComponent } from './list/list.component';
 
 
 @NgModule({
@@ -23,8 +22,8 @@ import { ButtonsComponent} from './buttons/buttons.component';
     HomeComponent,
     NavigateComponent,
     TablesComponent,
-    FormsComponent,
-    ButtonsComponent,
+    ListComponent,
+   
    
   ],
   imports: [
