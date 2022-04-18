@@ -12,8 +12,9 @@ import { HomeComponent } from './home/home.component';
 //UI/UX
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigateComponent } from './navigate/navigate.component';
-import { TablesComponent } from './tables/tables.component';
-import { ListComponent } from './list/list.component';
+import { GraduatesComponent } from './graduates/graduates.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { SchoolsComponent } from './schools/schools.component';
 
 
 @NgModule({
@@ -21,8 +22,9 @@ import { ListComponent } from './list/list.component';
     AppComponent,
     HomeComponent,
     NavigateComponent,
-    TablesComponent,
-    ListComponent,
+    GraduatesComponent,
+    SubjectsComponent,
+    SchoolsComponent,
    
    
   ],
