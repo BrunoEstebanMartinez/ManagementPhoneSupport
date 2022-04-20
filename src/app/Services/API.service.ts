@@ -1,36 +1,32 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {coreAPI} from '../Services/CoreAPI.service';
+
 
 import { Observable } from 'rxjs';
+
 @Injectable({
     providedIn: 'root'    
 })
 
-export class APICore{
+export abstract class APICore implements coreAPI{
 
-    URLBaseInitial: string =  'http://apirestinlaravel/api/';
-    service: boolean = false; 
-    URLComplement: string = ''; 
-    
+        protected URLBaseInitial: string = 'http/apirestinlaravel/api/';
+        constructor(private http: HttpClient){}
 
-        constructor(private http: HttpClient){
-        this.URLComplement; 
-        }
-    
-        protected getData(): any{
-        return this.http.get(this.URLBaseInitial + this.URLComplement);
+        getData(URLComplement: string): any{
+            return this.http.get(this.URLBaseInitial + URLComplement);
         }
 
-    
-        create(data): any{
-        return this.http.post(this.URLBaseInitial + this.URLComplement, data);
+        create(URLComplement: string, data: any): Observable<any> {
+        return this.http.post(this.URLBaseInitial + URLComplement, data);
         }
 
-        showMeBy(byname): any {
-            return this.http.get(this.URLBaseInitial + this.URLComplement + byname);
+        showMeBy(URLComplement: string, byname: any): any{
+            return this.http.get(this.URLBaseInitial + URLComplement + byname);
         }
 
-        update(byname, data): any{
+        update(byname: string, data: any): any{
             return this.http.put(this.URLBaseInitial + byname, data);
         }
     
@@ -38,11 +34,11 @@ export class APICore{
             return this.http.delete(this.URLBaseInitial);
         }
     
-        destroyBy(byname): any{
+        destroyBy(byname:string): any{
             return this.http.delete(this.URLBaseInitial + byname);
         }
     
-        showMeByName(byName): any{
+        showMeByName(byName: string): any{
             return this.http.get(this.URLBaseInitial + byName);
         }
 }
