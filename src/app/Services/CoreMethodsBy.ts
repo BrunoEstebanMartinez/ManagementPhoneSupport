@@ -1,7 +1,10 @@
-import {APICore} from './API.service';
+
 
 export interface CoreMethodsBy{
-  save(): any; 
+  
+  concept: any;
+
+  save(concept: any): any; 
   retrive(): any;
 }
 

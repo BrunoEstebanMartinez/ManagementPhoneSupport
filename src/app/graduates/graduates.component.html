@@ -8,8 +8,11 @@
                      </tr>
                   </thead>
                   <tbody>
-                     <tr>
-
+                     <tr *ngFor = "let student of graduetStudent">
+                         <td>{{ student.LastName }}</td>
+                         <td>{{ student.mLastName }}</td>
+                         <td>{{ student.Names }}</td>
+                         <td>{{ student.OldSchool }}</td>
                      </tr>
                   </tbody>
                </table>

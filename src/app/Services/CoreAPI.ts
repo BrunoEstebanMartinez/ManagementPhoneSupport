@@ -1,4 +1,4 @@
-import { CoreMethodsBy } from "./CoreMethodsBy.service";
+import { CoreMethodsBy } from "./CoreMethodsBy";
 
 export interface coreAPI{
    

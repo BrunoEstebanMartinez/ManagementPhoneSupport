@@ -1,24 +1,19 @@
-import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {coreAPI} from '../Services/CoreAPI.service';
+import {coreAPI} from './CoreAPI';
 
-
-import { Observable } from 'rxjs';
-
-@Injectable({
-    providedIn: 'root'    
-})
 
 export abstract class APICore implements coreAPI{
 
-        protected URLBaseInitial: string = 'http/apirestinlaravel/api/';
+        protected URLBaseInitial: string = 'http://apirestinlaravel.test/api/';
+        
+        
         constructor(private http: HttpClient){}
 
-        getData(URLComplement: string): any{
-            return this.http.get(this.URLBaseInitial + URLComplement);
+        getData(URLComplement: string){
+            return this.http.get<any>(this.URLBaseInitial + URLComplement);
         }
 
-        create(URLComplement: string, data: any): Observable<any> {
+        create(URLComplement: string, data: any){
         return this.http.post(this.URLBaseInitial + URLComplement, data);
         }
 
